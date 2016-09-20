@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>File Mopper</title>
+<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="assets/css/mainStyle.css" />
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+</head>
+<body>
+	<div id="def-logo">
+		<img src="assets/img/project logo.png" alt="" />
+		
+	</div>
+	<div class = "mainLook" id = "tree">
+		<div>
+			<button id="add">+</button>
+			<button id="addfolder"><i class="fa fa-folder-o" aria-hidden="true"></i></button>
+			<button id="logout">Logout</button>
+		</div>
+	<ol id="treealike">
+		
+	</ol>
+	</div>
+	
+	<div class="mainLook" id="content" >
+		<div class="file">
+			<div class="icon fa fa-file-text-o fa-3x"></div>
+			<p>fileName</p>
+		</div>
+		<div class="file">
+			<div class="icon fa fa-folder-o fa-3x"></div>
+			<p>fileName</p>
+		</div>
+		
+	</div>
+	
+	<div id="uploads" style="display: none">
+		<form action="" enctype="multipart/form-data" id="fileupload" >
+			<input type="file" id="uploadField" name="file" required="required"/>
+			<div id='close'>X</div>
+			<div>
+				<label for="">into folder:</label>
+				<select name="" id="">
+					<option value="">asd</option>
+				</select>
+			</div>
+			<button type="submit" id="upload" style="cursor: pointer">Upload</button>
+		</form>
+	</div>
+	
+	<div id="folder" style="display: none">
+		<div id='closefolder'>X</div>
+		<form id = 'addsfolder'action=""  >
+			<div>
+				<label for="">Folder Name:</label>
+				<input type="text" id="selectfolder"/>
+			</div>
+			<button type="submit" id="upload" style="cursor: pointer">Add</button>
+		</form>
+	</div>
+	
+	<div class="mainLook" id="in" style="display:none" >
+		<div>X</div>
+	</div>
+	
+</body>
+</html>

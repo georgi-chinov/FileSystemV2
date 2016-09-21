@@ -1,3 +1,4 @@
 <?php
 session_start();
-session_destory();
+session_unset();
+session_destroy();

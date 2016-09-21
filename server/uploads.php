@@ -6,7 +6,7 @@ $file = $_FILES['upload'];
 $file_name = $file['name'];
 $file_tmp = $file['tmp_name'];
 $file_owner = $_SESSION['user'];
-
+$parent = $_POST['location'];
 $success = 'success';
 $folder = "../uploads/$file_owner";
 
@@ -45,11 +45,12 @@ $file_location = "uploads/". $file_owner . '/' . $file_new_name;
 $conn = new PDO("mysql:host=$servername; dbname=filesystem", $username, $password);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$stmt = $conn->prepare("INSERT INTO userfiles (username, filename, filepath)
-    VALUES (:username, :filename, :filepath)");
+$stmt = $conn->prepare("INSERT INTO userfiles (username, filename, filepath, parent)
+    VALUES (:username, :filename, :filepath, :parent)");
 $stmt->bindParam(':username', $file_owner);
 $stmt->bindParam(':filename', $file_name);
 $stmt->bindParam(':filepath', $file_location);
+$stmt->bindParam(':parent', $parent);
 $stmt-> execute();
 echo json_encode('Done');
 

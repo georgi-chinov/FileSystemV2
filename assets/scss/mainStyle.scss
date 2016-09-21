@@ -69,9 +69,8 @@ body {
 	margin-left: .5%;
 	background-size: 100%;
     min-height: 800px;
-    i {
-    	color: #006466;
-    }
+
+   
 	#add, #logout, #addfolder {
 		background: none;
 	    font-size: 1.5em;
@@ -87,13 +86,16 @@ body {
 		float: right;
 	}
 	ol {
-		padding: 5px;
+		
     	font-size: 1.2em;
     	li {
     		margin: 10px;
+    		color: #006466;
+    		display:block;
     		span {
-    			padding: 7px;
+    			padding: 3px;
     			color: #006466;
+    			display: inline-block;
     		}
     		
     	}
@@ -107,9 +109,9 @@ body {
    		 .file {
    		 	display: inline-block;
    		 	padding: 30px;
- 		 	width: 100px;
+ 		 	width: 150px;
  		 	.icon {
-	 	       	width: 40px;
+	 	       	width: 45px;
    				display: block;
    				margin: auto;
    				color:#006466;
@@ -120,6 +122,8 @@ body {
     			color: #006466;
     			overflow: hidden;
     			white-space: nowrap;
+    			text-align: center;
+    			line-height: 120%;
    		 	}
    		 }
 }	
